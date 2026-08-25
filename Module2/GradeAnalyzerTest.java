@@ -37,5 +37,15 @@ public class GradeAnalyzerTest {
         assertEquals(88.0, GradeAnalyzer.calculateAverage(scores)); 
     }
 
+      @Test
+    void calculateAverage_verfiyExactAvg(){
+        ArrayList<Integer> scores = new ArrayList<>(Arrays.asList(10,20,30,40,50,60,70,80,90));
+        assertEquals(50.0, GradeAnalyzer.calculateAverage(scores));
+    }
 
+    @Test
+    void calculateAverage_verfiyAvgRandom(){
+        ArrayList<Integer> scores=  new ArrayList<>(Arrays.asList(24,56,86,35,98));
+        assertEquals(59.8, GradeAnalyzer.calculateAverage(scores));
+    }
 }

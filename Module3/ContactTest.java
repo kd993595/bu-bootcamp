@@ -33,5 +33,18 @@ public class ContactTest {
     assertTrue(c.toString().contains("555-0001"));
   }
 
+  @Test 
+  void constructor_ObjectsDifferent(){
+    Contact a = new Contact("Tim Bernie", "556-907-3456");
+    Contact b = new Contact("Tim Bernie", "345-564-2954");
+    a = new Contact("lee wall", "345-235-8755");
 
+    assertEquals("Tim Bernie | 345-564-2954", b.toString());
+  }
+
+  @Test 
+  void getPhone_worksCorrectly(){
+    Contact c = new Contact("ada lovelace", "123-456-7890");
+    assertEquals("123-456-7890", c.getPhone());
+  }
 } 
